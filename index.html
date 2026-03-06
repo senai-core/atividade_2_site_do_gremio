@@ -1,50 +1,100 @@
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Site do Grêmio</title>
+    <title>Nordschleife Hub</title>
 </head>
 <body>
     <header>
-
         <div id="navbar">
-            
-            <a href="https://gremio.net/home"> 
-                <img id="icon" src="assets/icon.svg" alt="Ícone do Grêmio">
+            <a href="#" aria-label="Início">
+                <img id="icon" src="assets/icon.svg" alt="Ícone do circuito">
             </a>
 
-            <h2> Site de Notícias do Grêmio</h2>
+            <h2>Nordschleife Hub</h2>
 
             <ul id="links">
-                <li>Arquivos</li>
-                <li>Clube</li>
-                <li>Sair</li>
+                <li>História</li>
+                <li>Setores</li>
+                <li>Leaderboard</li>
             </ul>
         </div>
 
+        <div id="header_banner">
+            <p class="banner_kicker">Nurburgring Nordschleife</p>
+            <h1>Ritmo, precisão e coragem no Green Hell</h1>
+            <div class="banner_stats">
+                <span>20,8 km</span>
+                <span>150+ curvas</span>
+                <span>desnível intenso</span>
+            </div>
+        </div>
     </header>
+
     <main>
-
         <section class="noticias">
+            <article class="noticia">
+                <img class="img_noticia" src="assets/n1.jpg" alt="Trecho da Nordschleife">
+                <h3>Nordschleife: 20,8 km de respeito</h3>
+                <p>
+                    A pista conhecida como Green Hell combina alta velocidade, elevação agressiva
+                    e mais de 150 curvas. Um laboratório real para pilotos e equipes.
+                </p>
+            </article>
 
-            <div class="noticia">
-                <img class="img_noticia" src="assets/n1.jpg" alt="Senhor Representante do Grêmio">
-                <h3>Grêmio sobe para a Série A</h3>
-                <p>Um milagre!</p>
-            </div>
-            
-            <div class="noticia">
-                <img class="img_noticia" src="assets/n2.jpg" alt="Senhor Representante do Grêmio">
-                <h3>Grêmio cai para a Série B</h3>
-                <p>Não estou suportando mais!</p>
-            </div>
+            <article class="noticia leaderboard">
+                <img class="img_noticia" src="assets/n2.jpg" alt="Carro em volta rápida na Nordschleife">
+                <h3>Leaderboard por Classe</h3>
 
+                <div class="tabs" role="tablist" aria-label="Selecione uma classe">
+                    <button class="tab active" data-classe="GT3" role="tab" aria-selected="true">GT3</button>
+                    <button class="tab" data-classe="GT4" role="tab" aria-selected="false">GT4</button>
+                    <button class="tab" data-classe="TCR" role="tab" aria-selected="false">TCR</button>
+                    <button class="tab" data-classe="Hypercar" role="tab" aria-selected="false">Hypercar</button>
+                </div>
+
+                <div class="tabela_container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Piloto</th>
+                                <th>Carro</th>
+                                <th>Volta</th>
+                                <th>Ano</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard_body"></tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="noticia">
+                <img class="img_noticia" src="assets/n3.png" alt="Visual técnico da pista">
+                <h3>Setores de Referência</h3>
+                <p>
+                    Foque em Flugplatz, Schwedenkreuz e Karussell para consistência.
+                    A diferença está em frear cedo no primeiro stint e guardar pneu para o final.
+                </p>
+            </article>
+
+            <article class="noticia mapa_card">
+                <h3>Mapa da Nordschleife</h3>
+                <div class="mapa_wrap" aria-label="Mapa estilizado da Nordschleife">
+                    <img class="mapa_img" src="assets/pista/nurgburgring.webp" alt="Mapa da pista Nurburgring Nordschleife">
+                </div>
+                <p>
+                    Traçado base para referência visual rápida de setores e pontos de frenagem.
+                </p>
+            </article>
         </section>
-
     </main>
+
     <footer>
-        <p> Todos os direitos reservados ao professor Ícaro. </p>
+        <p>Projeto didático personalizado para a Nordschleife.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
